@@ -3,20 +3,26 @@
 
 
 ## Student Information
-
-
  **Name**  Avdhi Shah 
- **Student ID** 202618006
- **Lab**  Lab 2 - NumPy and Pandas 
+ **Student ID**  202618006 
  **Dataset**  Kaggle Titanic Dataset (`train.csv`) 
+ **Tools**  Python, NumPy, Pandas, Matplotlib, Seaborn 
+ **Notebook**  Jupyter Notebook 
 
+---
 
 ## Objective
 
-The objective of this lab is to practice **vectorized programming using NumPy** and **data wrangling and visualization using Pandas**.
+The objective of this lab is to practice **vectorized programming using NumPy** and **basic data wrangling, analysis, and visualization using Pandas**.
 
-The lab focuses on creating and manipulating NumPy arrays, performing statistical and linear algebra operations, generating data from a normal distribution, and analyzing the Kaggle Titanic dataset using Pandas.
+The lab is divided into two parts:
 
+- **Part A:** Vectorized Programming with NumPy
+- **Part B:** Data Wrangling with Pandas using the Titanic dataset
+
+The analysis demonstrates array manipulation, statistical calculations, linear algebra, random data generation, filtering, grouping, missing-value handling, feature engineering, outlier detection, and visualization.
+
+---
 
 # Part A - Vectorized Programming with NumPy
 
@@ -26,43 +32,47 @@ This task demonstrates fundamental NumPy array operations.
 
 The following operations were performed:
 
-- Generated an array of 100 random integers using `np.random.randint()`.
-- Used `np.random.seed()` to make the random values reproducible.
-- Calculated the minimum, maximum, median, mean, and standard deviation.
-- Generated an array of exactly 100 values using `np.arange()`.
+- Generated Array A with 100 random integers.
+- Used a random seed for reproducibility.
+- Calculated minimum, maximum, median, mean, and standard deviation.
+- Generated Array B with exactly 100 values using `np.arange()`.
 - Created arrays using `np.zeros()` and `np.ones()`.
 - Displayed array shape and data type.
 - Used `np.linspace()` to generate evenly spaced values.
 - Compared `np.linspace()` with `np.arange()`.
-- Created and explored 2D and 3D arrays.
-- Demonstrated indexing, rows, columns, and slicing.
-- Used `reshape()` to convert an array into a matrix.
+- Created 2D and 3D arrays.
+- Demonstrated shape, dimensions, indexing, rows, columns, and slicing.
+- Used `reshape()` to create a matrix.
 - Used `flatten()` to convert the matrix back into a 1D array.
 
 ### Key Concept
 
-`np.arange()` generates values using a specified step size, while `np.linspace()` generates a specified number of evenly spaced values between two endpoints.
+`np.arange()` generates values based on a step size, while `np.linspace()` generates a specified number of evenly spaced values between two endpoints.
 
 ---
 
-# Task 2 - Vectorized Arithmetic and Linear Algebra
+## Task 2 - Vectorized Arithmetic and Linear Algebra
 
-Two matrices were created and NumPy vectorized operations were used to perform:
+Two matrices were created and NumPy vectorized operations were performed.
+
+The following operations were implemented:
 
 - Matrix addition
 - Element-wise multiplication
-- Matrix multiplication using `@` and `np.matmul()`
+- Matrix multiplication using `@`
+- Matrix multiplication using `np.matmul()`
 - Matrix transpose
-- Determinant calculation
+- Determinant
 - Matrix inverse
-- Verification of the inverse using `np.allclose()`
+- Verification using `np.allclose()`
 
-
+Explicit Python loops were avoided.
 
 ### Key Concept
 
-The `*` operator performs **element-wise multiplication**, while the `@` operator performs **matrix multiplication**.
+The `*` operator performs element-wise multiplication, while `@` performs matrix multiplication.
 
-The inverse of a matrix exists only when its determinant is non-zero.
+For an invertible matrix:
 
-
+```text
+A × A⁻¹ = I
