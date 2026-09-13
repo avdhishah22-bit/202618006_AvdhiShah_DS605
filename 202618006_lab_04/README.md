@@ -86,24 +86,4 @@ predictions for very high-end listings will be systematically low, and an R² of
 roughly 64% of price variation is explained — solid, but factors like listing photos, host
 reputation, and seasonal demand aren't captured by these features alone.
 
-## Deployment Notes (Streamlit Community Cloud)
-
-This app is deployed and live at the link above. A few real issues came up during
-deployment that are worth documenting:
-
-- **Exact version pinning is required.** `requirements.txt` originally used loose bounds
-  (`scikit-learn>=1.3`), which let Streamlit Cloud install a different scikit-learn version
-  than the one used to train and pickle the model locally — this caused an `AttributeError`
-  when unpickling. Fixed by pinning exact versions matching the local (Anaconda) training
-  environment: `scikit-learn==1.5.1`, `numpy==1.26.4`, `joblib==1.4.2`.
-- **`jupyter` should NOT be in the deployment `requirements.txt`.** It was originally
-  included for convenience, but it's a heavy package with a large dependency tree that
-  significantly slows down cloud builds — and the deployed app never imports it. Removing
-  it cut the resolved package count from 126 down to 49.
-- **Python version matching matters too.** Streamlit Cloud's default Python version may not
-  match the version used locally to train the model (e.g. Cloud defaulting to a very new
-  Python release without prebuilt wheels yet for some pinned package versions, forcing slow
-  or failing source builds). Set the Python version explicitly in the app's Advanced
-  Settings to match your local training environment (3.12, matching Anaconda, for this
-  project).
 
