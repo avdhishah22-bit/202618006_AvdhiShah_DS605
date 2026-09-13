@@ -4,8 +4,6 @@
 
 🚀 **Live app:** https://202618006avdhishahds605-cx4f3mu3y9j4cavh9yqxmz.streamlit.app/
 
-All project files live flat in this one folder (no subfolders).
-
 ## Files
 
 | File | Purpose |
