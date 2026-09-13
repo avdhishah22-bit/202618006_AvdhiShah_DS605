@@ -32,12 +32,6 @@ jupyter notebook Airbnb_Price_Prediction.ipynb
 # 3. Launch the Streamlit app
 streamlit run app.py
 ```
-
-> **Environment note:** on Windows, training via a plain `pip`-installed Python can trigger
-> a Smart App Control DLL block on scikit-learn's compiled extensions. Using **Anaconda's**
-> Python for both the notebook and the app sidesteps this entirely, and is what this
-> project was actually built and tested with.
-
 ## Project Summary
 
 ### Task 1 — Data Analysis & Preparation
