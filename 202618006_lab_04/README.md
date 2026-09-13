@@ -10,7 +10,7 @@
 |---|---|
 | `Airbnb_Price_Prediction.ipynb` | Task 1 (EDA, cleaning, feature engineering) + Task 2 (model comparison, tuning, evaluation) + Task 4 (final summary, filled in with actual results). Saves `airbnb_price_pipeline.pkl` at the end. |
 | `app.py` | Task 3 — Streamlit app that loads the saved pipeline and predicts nightly price from user input. |
-| `airbnb_price_pipeline.pkl` | Saved scikit-learn pipeline (preprocessing + trained model), ~610 KB. |
+| `airbnb_price_pipeline.pkl` | Saved scikit-learn pipeline (preprocessing + trained model). |
 | `AB_NYC_2019.csv` | The dataset. |
 | `requirements.txt` | Deployment dependencies, with exact versions pinned to match the training environment. |
 
