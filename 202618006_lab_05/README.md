@@ -1,6 +1,6 @@
 # Lab 5 — Garment Employee Productivity
 
-**Everything is in [`garment_productivity_ml.ipynb`](./garment_productivity_ml.ipynb).**
+**Everything is in [`202618006_lab5.ipynb`](./garment_productivity_ml.ipynb).**
 Data loading, cleaning, the fixed train/test split, Part A (Scikit-learn),
 Part B (from-scratch baseline), Part C (from-scratch optimized), and the
 comparison tables all run top-to-bottom in that single notebook.
