@@ -27,7 +27,7 @@ vectorizers (CountVectorizer, TF-IDF) and traditional ML models.
 | Asphalt cracks (400 images) | Mendeley Data - Asphalt Crack Dataset | 
 | Email spam (5,172 emails) | Kaggle - Email Spam Classification Dataset | 
 
-**Note on the email file:** emails spam is supplied as a pre-computed 3,000-word count matrix
+**Note on the email data set:** emails spam is supplied as a pre-computed 3,000-word count matrix
 per email (no raw text), plus a `Prediction` label. To still use CountVectorizer/TF-IDF as
 required, each email is reconstructed as a bag-of-words pseudo-document (each word repeated by
 its count) before vectorising. Word order is lost in this reconstruction, so bigram features are
