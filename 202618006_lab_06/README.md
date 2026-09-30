@@ -1,6 +1,4 @@
-# DS605 - Lab 6: Feature Extraction and Machine Learning with Image and Text Data
-
-**Student:** Avdhi Shah (202618006)
+# Lab 6: Feature Extraction and Machine Learning with Image and Text Data
 
 Classical machine learning on hand-crafted image features (asphalt cracks) and vectorised text
 (email spam). **No CNNs, deep learning, or pretrained embeddings are used anywhere** - image
@@ -11,21 +9,19 @@ vectorizers (CountVectorizer, TF-IDF) and traditional ML models.
 ```
 202618006_lab_06/
 ├── README.md
-├── 202618006_lab6.ipynb      # single notebook: setup + Part A + Part B + Part C
+├── 202618006_lab6.ipynb
+├── figures/
+├── results/
 └── data/
     ├── emails.csv             # Kaggle Email Spam Classification Dataset (5,172 emails)
     └── asphalt/                # Mendeley Asphalt Crack Dataset (400 images)
         ├── Cracks/
         └── NonCracks/
 ```
-Everything - code, explanations, and (after running) results and figures - lives inside the
-notebook. Running it also creates two local folders, `results/` and `figures/`, next to the
-notebook, holding the CSVs and PNGs it produces.
 
 ## How to run
-1. Open `202618006_lab6.ipynb` in Jupyter or VS Code, using an environment with **NumPy < 2**
-   (a newer NumPy conflicts with some installed packages such as pyarrow).
-2. Run the **Setup** cell at the top first - it installs every required package
+1. Open `202618006_lab6.ipynb` in Jupyter or VS Code.
+2. Run the cell at the top first to setup, it installs every required package
    (`numpy<2`, `pandas`, `opencv-python`, `matplotlib`, `scikit-learn`) into the current kernel.
 3. Make sure the notebook's working directory is this folder (`202618006_lab_06`), so the
    relative paths `data/emails.csv` and `data/asphalt/` resolve correctly. If needed, add
@@ -72,38 +68,6 @@ representations.
 
 Each improvement is directly compared against its baseline on accuracy/F1, feature
 dimensionality, and computation time.
-
-## Results and observations
-*(Fill in the numbers below from `results/*.csv` after running the notebook.)*
-
-### Part A - image classification (baseline, 14 features)
-| Model | Accuracy | Precision | Recall | F1 | Train (s) | Predict (s) |
-|---|---|---|---|---|---|---|
-| Logistic Regression | | | | | | |
-| SVM (RBF) | | | | | | |
-| KNN (k=5) | | | | | | |
-| Random Forest | | | | | | |
-
-Observations: *(best model, which class was more often confused, what the edge/Canny features
-contributed relative to plain intensity statistics)*
-
-### Part B - Count vs TF-IDF
-| Setup | # Features | Best Model | Accuracy | F1 | Train (s) | Predict (s) |
-|---|---|---|---|---|---|---|
-| CountVectorizer | ~2,974 | | | | | |
-| TF-IDF | ~2,974 | | | | | |
-
-Observations: *(Count vs TF-IDF difference, Naive Bayes vs linear models)*
-
-### Part C - improvement vs baseline
-**Images:** baseline F1 = \_\_ (14 features) vs improved F1 = \_\_ (41 features); feature
-extraction time \_\_s vs \_\_s.
-
-**Text:** full-vocabulary F1 = \_\_ (~2,974 features) vs limited-vocabulary (2,000 words) F1 =
-\_\_; feature count and vectorisation time reduced by \_\_%.
-
-**Discussion:** *(trade-off between feature dimensionality, computation time, and classification
-performance; which change was worth making and why)*
 
 ## Limitations
 - Only 400 images means test-set metrics are noisy; 5-fold CV F1 is reported alongside the
