@@ -12,29 +12,22 @@ vectorizers (CountVectorizer, TF-IDF) and traditional ML models.
 ├── 202618006_lab6.ipynb
 ├── figures/
 ├── results/
-└── data/
-    ├── emails.csv             # Kaggle Email Spam Classification Dataset (5,172 emails)
-    └── asphalt/                # Mendeley Asphalt Crack Dataset (400 images)
-        ├── Cracks/
-        └── NonCracks/
+
 ```
 
 ## How to run
 1. Open `202618006_lab6.ipynb` in Jupyter or VS Code.
 2. Run the cell at the top first to setup, it installs every required package
    (`numpy<2`, `pandas`, `opencv-python`, `matplotlib`, `scikit-learn`) into the current kernel.
-3. Make sure the notebook's working directory is this folder (`202618006_lab_06`), so the
-   relative paths `data/emails.csv` and `data/asphalt/` resolve correctly. If needed, add
-   `os.chdir(r"<full path to this folder>")` as the first line of the Setup cell.
-4. Run all cells top to bottom (Kernel → Restart & Run All).
+3. Run all cells top to bottom (Kernel → Restart & Run All).
 
 ## Datasets
-| Task | Source | Location |
-|---|---|---|
-| Asphalt cracks (400 images) | Mendeley Data - Asphalt Crack Dataset | `data/asphalt/` (Cracks / NonCracks subfolders) |
-| Email spam (5,172 emails) | Kaggle - Email Spam Classification Dataset | `data/emails.csv` |
+| Task | Source |
+|---|---|
+| Asphalt cracks (400 images) | Mendeley Data - Asphalt Crack Dataset | 
+| Email spam (5,172 emails) | Kaggle - Email Spam Classification Dataset | 
 
-**Note on the email file:** `emails.csv` is supplied as a pre-computed 3,000-word count matrix
+**Note on the email file:** emails spam is supplied as a pre-computed 3,000-word count matrix
 per email (no raw text), plus a `Prediction` label. To still use CountVectorizer/TF-IDF as
 required, each email is reconstructed as a bag-of-words pseudo-document (each word repeated by
 its count) before vectorising. Word order is lost in this reconstruction, so bigram features are
