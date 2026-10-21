@@ -1,0 +1,7 @@
+model,features,k,params,cv_acc,test_acc
+"Nearest neighbour (NumPy, Euclidean)",raw pixels (10304),10304,-,nan,0.9875
+"Nearest neighbour (NumPy, Euclidean)",PCA k=99,99,-,nan,0.9875
+KNN,PCA k=30,30,"{'n_neighbors': 1, 'weights': 'uniform'}",0.96875,0.9875
+Logistic Regression,PCA k=50,50,{'logisticregression__C': 0.01},0.9593750000000001,0.95
+SVM (linear),PCA k=30,30,{'svc__C': 0.1},0.9593750000000001,0.9625
+SVM (RBF),PCA k=75,75,"{'C': 10, 'gamma': 'scale'}",0.9812500000000001,0.9875
