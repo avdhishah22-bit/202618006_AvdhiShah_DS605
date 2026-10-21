@@ -1,4 +1,4 @@
-# DS605 Lab 7: Image Representation, PCA, Eigenfaces and Face Recognition
+# Lab 7: Image Representation, PCA, Eigenfaces and Face Recognition
 
 Face recognition on the AT&T (ORL) Database of Faces (40 subjects x 10 images, 112 x 92 grayscale).
 All PCA / eigenface computations are implemented with NumPy linear algebra. Scikit-learn is used only
