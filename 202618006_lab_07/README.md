@@ -8,7 +8,7 @@ in Part D for the traditional classifiers.
 
 | Path | What it is |
 |---|---|
-| `lab7_face_recognition.ipynb` | Runnable notebook (Parts A-D) |
+| `202618006_lab_07.ipynb` | Runnable notebook (Parts A-D) |
 | `figures/` | Explained variance, eigenfaces, reconstructions, matches, classifier comparison |
 | `results/` | `ml_comparison.csv/.md`, `reconstruction_storage.csv`, `summary.json`, reduced representation `.npz` |
 
@@ -16,7 +16,7 @@ in Part D for the traditional classifiers.
 ## How to run
 
 1. Download the AT&T/ORL faces and place them as `data/att_faces/s1/1.pgm ... s40/10.pgm`.
-2. Run the notebook, or `python lab7_face_recognition.py` (set `ORL_DIR` to use another data path).
+2. Run the notebook (set `ORL_DIR` to use another data path).
 
 Everything is seeded (`SEED = 42`), so results are reproducible.
 
